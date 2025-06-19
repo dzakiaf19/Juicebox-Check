@@ -1,12 +1,37 @@
-# React + Vite
+# Juicebox Reality Check – Frontend Developer Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an interactive multi-step UI built with **React + Tailwind CSS**, created as part of a frontend developer assessment for Juicebox. It features animated transitions, dynamic steps, form validation, and reusable components.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 💬 Step-by-step conversation interface
+- 🌀 Animated text transitions
+- 🔍 Form validation (name + email)
+- 🎨 Responsive UI with Tailwind CSS
+- 💾 State management via React Hooks
+- 📦 Clean component structure
 
-## Expanding the ESLint configuration
+## 🖼️ Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![image](https://github.com/user-attachments/assets/1b22f66b-0947-4256-8559-ebe6ff8c0b8e)
+![image](https://github.com/user-attachments/assets/801e331b-f61e-4e5c-850b-7305d9d3d0d4)
+![image](https://github.com/user-attachments/assets/16bfc035-42a9-4ffe-9279-c0675685545c)
+
+## 🚀 Getting Started
+
+1. **Clone this repository**
+
+```bash
+git clone https://github.com/yourusername/juicebox-assessment.git
+cd juicebox-assessment
+
+npm install
+
+npm run dev
+
+```
+
+## 👤 Author
+Made with ❤️ by Dzaki Ahmad Fajrianto
+[LinkedIn](https://www.linkedin.com/in/dzakiahmadf/) • [GitHub](https://github.com/dzakiaf19)
+
