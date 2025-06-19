@@ -1,0 +1,405 @@
+/* globals.css atau main.css */
+@import "tailwindcss";
+
+/* ========================================
+   THEME CONFIGURATION
+   ======================================== */
+@theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ========================================
+   KEYFRAME ANIMATIONS
+   ======================================== */
+
+/* Word Animations */
+@keyframes fadeInWord {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeOutGradientWord {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+}
+
+/* Gradient Animations */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Slide Animations */
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutLeft {
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutRight {
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Glow Animation */
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 15px #8b5cf6;
+        color: #a855f7;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #c084fc, 0 0 20px #c084fc, 0 0 30px #c084fc;
+        color: #c084fc;
+    }
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+body {
+    background: radial-gradient(circle at top center, #222737, #0c0d10);
+    color: white;
+    min-height: 100vh;
+}
+
+/* ========================================
+   WORD ANIMATION CLASSES
+   ======================================== */
+.word-animation {
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.4s ease-out;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+}
+
+.word-animation.animate {
+    opacity: 1;
+}
+
+.word-animation.out {
+    animation: fadeOut 0.8s ease-in-out forwards;
+}
+
+/* Word Animation Delays */
+.word-animation[data-delay="0"].animate {
+    transition-delay: 0ms;
+}
+
+.word-animation[data-delay="1"].animate {
+    transition-delay: 100ms;
+}
+
+.word-animation[data-delay="2"].animate {
+    transition-delay: 200ms;
+}
+
+.word-animation[data-delay="3"].animate {
+    transition-delay: 300ms;
+}
+
+.word-animation[data-delay="4"].animate {
+    transition-delay: 400ms;
+}
+
+.word-animation[data-delay="5"].animate {
+    transition-delay: 500ms;
+}
+
+.word-animation[data-delay="6"].animate {
+    transition-delay: 600ms;
+}
+
+.word-animation[data-delay="7"].animate {
+    transition-delay: 700ms;
+}
+
+.word-animation[data-delay="8"].animate {
+    transition-delay: 800ms;
+}
+
+.word-animation[data-delay="9"].animate {
+    transition-delay: 900ms;
+}
+
+.word-animation[data-delay="10"].animate {
+    transition-delay: 1000ms;
+}
+
+.word-animation[data-delay="11"].animate {
+    transition-delay: 1100ms;
+}
+
+.word-animation[data-delay="12"].animate {
+    transition-delay: 1200ms;
+}
+
+.word-animation[data-delay="13"].animate {
+    transition-delay: 1300ms;
+}
+
+.word-animation[data-delay="14"].animate {
+    transition-delay: 1400ms;
+}
+
+.word-animation[data-delay="15"].animate {
+    transition-delay: 1500ms;
+}
+
+.word-animation[data-delay="16"].animate {
+    transition-delay: 1600ms;
+}
+
+.word-animation[data-delay="17"].animate {
+    transition-delay: 1700ms;
+}
+
+.word-animation[data-delay="18"].animate {
+    transition-delay: 1800ms;
+}
+
+.word-animation[data-delay="19"].animate {
+    transition-delay: 1900ms;
+}
+
+.word-animation[data-delay="20"].animate {
+    transition-delay: 2000ms;
+}
+
+/* ========================================
+   SLIDE TEXT CLASSES
+   ======================================== */
+
+/* Base Slide Text Styles */
+.slide-text-1,
+.slide-text-3,
+.slide-text-5 {
+    font-family: var(--font-sans);
+    position: absolute;
+    font-size: 10px;
+    text-align: left;
+    transition: all 0.7s ease-out;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.slide-text-2,
+.slide-text-4 {
+    font-family: var(--font-sans);
+    position: absolute;
+    font-size: 10px;
+    text-align: right;
+    transition: all 0.7s ease-out;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+/* Slide Out Animations */
+.slide-out-left {
+    animation: slideOutLeft 0.8s ease-in-out forwards;
+}
+
+.slide-out-right {
+    animation: slideOutRight 0.8s ease-in-out forwards;
+}
+
+/* Animated State */
+.slide-text-1.animate,
+.slide-text-2.animate,
+.slide-text-3.animate,
+.slide-text-4.animate,
+.slide-text-5.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Specific Positioning */
+.slide-text-1 {
+    top: 15%;
+    left: 1%;
+    transition-delay: 0ms;
+}
+
+.slide-text-2 {
+    top: 27%;
+    right: 1%;
+    transition-delay: 200ms;
+}
+
+.slide-text-3 {
+    top: 47%;
+    left: 1%;
+    transition-delay: 400ms;
+}
+
+.slide-text-4 {
+    top: 64%;
+    right: 1%;
+    transition-delay: 600ms;
+}
+
+.slide-text-5 {
+    top: 78%;
+    left: 1%;
+    width: 190px;
+    transition-delay: 800ms;
+}
+
+/* ========================================
+   GRADIENT WORD CLASSES
+   ======================================== */
+.gradient-word {
+    background: linear-gradient(-45deg, #8b5cf6, #a855f7, #c084fc, #d8b4fe, #8b5cf6);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-word.animate {
+    animation: fadeInWord 0.4s ease-out forwards, gradientShift 3s ease-in-out infinite;
+}
+
+.gradient-word.out {
+    animation: fadeOutGradientWord 0.4s ease-in forwards;
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.animated-gradient-text {
+    position: relative;
+}
+
+.shimmer-text {
+    background: linear-gradient(90deg,
+            #8b5cf6 0%,
+            #c084fc 25%,
+            #f3e8ff 50%,
+            #c084fc 75%,
+            #8b5cf6 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 2s linear infinite;
+}
+
+.pulse-glow-text {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+@media (min-width: 640px) {
+
+    .slide-text-1,
+    .slide-text-2,
+    .slide-text-3,
+    .slide-text-4,
+    .slide-text-5 {
+        font-size: 12px;
+    }
+
+    .slide-text-1,
+    .slide-text-3,
+    .slide-text-5 {
+        left: 2%;
+    }
+
+    .slide-text-2,
+    .slide-text-4 {
+        right: 2%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .slide-text-1,
+    .slide-text-2,
+    .slide-text-3,
+    .slide-text-4,
+    .slide-text-5 {
+        font-size: 14px;
+    }
+
+    .slide-text-5 {
+        width: 250px;
+    }
+}
