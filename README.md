@@ -4,12 +4,11 @@ This is an interactive multi-step UI built with **React + Tailwind CSS**, create
 
 ## ✨ Features
 
-- 💬 Step-by-step conversation interface
-- 🌀 Animated text transitions
-- 🔍 Form validation (name + email)
-- 🎨 Responsive UI with Tailwind CSS
-- 💾 State management via React Hooks
-- 📦 Clean component structure
+- Step-by-step conversation interface
+- Animated text transitions
+- Form validation (name + email)
+- Responsive UI with Tailwind CSS
+- Clean component structure
 
 ## 🖼️ Preview
 
